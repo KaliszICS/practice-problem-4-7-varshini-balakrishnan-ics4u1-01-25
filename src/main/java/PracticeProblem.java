@@ -21,7 +21,7 @@ public class PracticeProblem {
 
 		public static double withdraw(double amount, double balance) {
 			if (amount <= 0) {
-				throw new IllegalArgumentException("Amount must be greater than zero");
+				throw new IllegalArgumentException("Amount must be greater than zero & also not negative");
 			}
 			if (balance - amount < 0) {
 				throw new IllegalStateException("Insufficient funds");
