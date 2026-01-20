@@ -12,7 +12,7 @@ public class PracticeProblem {
 			if (age < 0) {
 				throw new IllegalArgumentException("Age cannot be negative.");
 			}
-			If (age > 150) { //oldest person was ~122 yrs old
+			if (age > 150) { //oldest person was ~122 yrs old
 				throw new IllegalArgumentException("Age must be realistic");
 			}
 			return true;
@@ -45,13 +45,13 @@ public class PracticeProblem {
 			}
 			String trimmed = email.trim();
 			if(!trimmed.contains("@")) {
-				IllegalArgumentException("Invalid email format");
+				throw new IllegalArgumentException("Invalid email format");
 			}
 			int atIndex = trimmed.indexOf("@");
 			int dotIndex = trimmed.indexOf(".", atIndex);
 
 			if (dotIndex == -1) {
-				throw new IllegalArgumentException("Invalid email format")
+				throw new IllegalArgumentException("Invalid email format");
 			}
 			return trimmed;
 		}
